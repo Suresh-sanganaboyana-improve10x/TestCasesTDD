@@ -10,6 +10,8 @@ public class FizzBuzz {
             result = "Fizz";
         } else if (temp % 5 == 0) {
             result = "Buzz";
+        } else {
+            result = String.valueOf(temp);
         }
         return result;
     }
