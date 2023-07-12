@@ -1,4 +1,4 @@
-package com.suresh.fibonacci;
+package com.suresh.improve10x.fibonacci;
 
 public class Fibonacci {
     public int findFibonacci(int n) {

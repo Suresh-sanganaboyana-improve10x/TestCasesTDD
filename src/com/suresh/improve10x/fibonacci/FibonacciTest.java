@@ -1,5 +1,6 @@
-package com.suresh.fibonacci;
+package com.suresh.improve10x.fibonacci;
 
+import com.suresh.improve10x.fibonacci.Fibonacci;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
