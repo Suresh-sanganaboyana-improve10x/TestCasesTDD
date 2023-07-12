@@ -19,7 +19,7 @@ public class FactorialTest {
     @Test
     public void getZeroFactorial_returnZero() {
         int factOfZero = factorial.findFactorial(0);
-        assertEquals(0, factOfZero);
+        assertEquals(1, factOfZero);
     }
 
     @Test
