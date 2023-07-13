@@ -64,4 +64,10 @@ public class NameInverterTest {
         String nominal = nameInverter.getNameInverted("first last Bcom.");
         assertEquals("last, first Bcom.", nominal);
     }
+
+    @Test
+    public void givenNameAndMultiplePostNominal_stayAtEnd() {
+        String nominal = nameInverter.getNameInverted("first last Bcom.");
+        assertEquals("last, first Bcom.", nominal);
+    }
 }
