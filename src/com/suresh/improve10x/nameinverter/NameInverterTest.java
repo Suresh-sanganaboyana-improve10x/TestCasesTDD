@@ -70,4 +70,10 @@ public class NameInverterTest {
         String nominal = nameInverter.getNameInverted("first last Bcom. MBA.");
         assertEquals("last, first Bcom. MBA.", nominal);
     }
+
+    @Test
+    public void integrationTest() {
+        String nameInverted = nameInverter.getNameInverted("Mr. Sanginaboina Suresh Application Developer");
+        assertEquals("Suresh, Sanginaboina Application Developer", nameInverted);
+    }
 }

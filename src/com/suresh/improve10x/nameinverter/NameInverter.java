@@ -8,11 +8,15 @@ public class NameInverter {
     public String getNameInverted(String name) {
         if (name.equals("")) {
             return "";
-        } else if (!name.trim().contains(" ")) {
+        } else if (isSingleWord(name)) {
             return name.trim();
         } else {
             return formatMultiElement(name);
         }
+    }
+
+    private static boolean isSingleWord(String name) {
+        return !name.trim().contains(" ");
     }
 
     private static String formatMultiElement(String name) {
@@ -31,8 +35,12 @@ public class NameInverter {
     }
 
     private static void removeHonorifics(ArrayList<String> names) {
-        if (names.get(0).matches("Mrs.|Mr.|Miss") && names.size() > 2) {
+        if (hasHonorifics(names) && names.size() > 2) {
             names.remove(0);
         }
+    }
+
+    private static boolean hasHonorifics(ArrayList<String> names) {
+        return names.get(0).matches("Mrs.|Mr.|Miss");
     }
 }
