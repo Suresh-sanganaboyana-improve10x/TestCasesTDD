@@ -48,8 +48,20 @@ public class NameInverterTest {
     }
 
     @Test
-    public void givenHonorifics_ignoreHonorifics() {
+    public void givenMrsHonorifics_ignoreHonorifics() {
         String nameInverted = nameInverter.getNameInverted("Mrs. first last");
         assertEquals("last, first", nameInverted);
+    }
+
+    @Test
+    public void givenMrHonorifics_ignoreHonorifics() {
+        String nameInverted = nameInverter.getNameInverted("Mr. first last");
+        assertEquals("last, first", nameInverted);
+    }
+
+    @Test
+    public void givenNameAndPostNominal_stayAtEnd() {
+        String nominal = nameInverter.getNameInverted("first last Bcom.");
+        assertEquals("last, first Bcom.", nominal);
     }
 }
