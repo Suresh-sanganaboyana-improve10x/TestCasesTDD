@@ -17,9 +17,9 @@ public class SayHelloByeTest {
     public void nothing() {}
 
     @Test
-    public void emptyName_returnByeEmpty() {
-        String givenEmpty = sayHelloBye.getHelloBye(0, "");
-        assertEquals("Bye "+ "", givenEmpty);
+    public void givenZeroSmallLetter_returnByeWithCapitalLetter() {
+        String givenEmpty = sayHelloBye.getHelloBye(0, "suri");
+        assertEquals("Bye Suri", givenEmpty);
     }
 
     @Test
