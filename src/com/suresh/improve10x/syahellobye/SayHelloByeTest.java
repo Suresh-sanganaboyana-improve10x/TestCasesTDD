@@ -19,7 +19,7 @@ public class SayHelloByeTest {
     @Test
     public void emptyName_returnByeEmpty() {
         String givenEmpty = sayHelloBye.getHelloBye(0, "");
-        assertEquals("Bye"+ "", givenEmpty);
+        assertEquals("Bye "+ "", givenEmpty);
     }
 
     @Test
