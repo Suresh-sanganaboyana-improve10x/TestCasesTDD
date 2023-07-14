@@ -27,4 +27,10 @@ public class SayHelloByeTest {
         String givenNegative = sayHelloBye.getHelloBye(-1, "Akhil");
         assertEquals("Invalid", givenNegative);
     }
+
+    @Test
+    public void giveZero_returnByeName() {
+        String givenZero = sayHelloBye.getHelloBye(0, "Mani");
+        assertEquals("Bye Mani", givenZero);
+    }
 }

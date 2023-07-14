@@ -4,7 +4,7 @@ public class SayHelloBye {
     public String getHelloBye( int num, String name) {
         String result = "";
         if (num == 0) {
-            result = "Bye" + name;
+            result = "Bye" +" "+ name;
         } else {
             result = "Invalid";
         }
