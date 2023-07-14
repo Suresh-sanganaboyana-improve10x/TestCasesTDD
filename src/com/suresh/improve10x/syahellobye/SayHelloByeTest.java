@@ -18,8 +18,8 @@ public class SayHelloByeTest {
 
     @Test
     public void givenZeroEmpty_returnByeEmpty() {
-        String givenOneName = sayHelloBye.getHelloBye(0, "");
-        assertEquals("Bye ", givenOneName);
+        String givenOneName = sayHelloBye.getHelloBye(4, "");
+        assertEquals("Give Name", givenOneName);
     }
     @Test
     public void givenZeroSmallLetter_returnByeWithCapitalLetter() {
