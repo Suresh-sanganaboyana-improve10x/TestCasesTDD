@@ -33,4 +33,10 @@ public class SayHelloByeTest {
         String givenZero = sayHelloBye.getHelloBye(0, "Mani");
         assertEquals("Bye Mani", givenZero);
     }
+
+    @Test
+    public void givenOneName_returnHelloName() {
+        String givenOneName = sayHelloBye.getHelloBye(1, "Suresh");
+        assertEquals("Hello Suresh", givenOneName);
+    }
 }
