@@ -5,6 +5,8 @@ public class SayHelloBye {
         String result = "";
         if (num == 0) {
             result = "Bye" + name;
+        } else {
+            result = "Invalid";
         }
         return result;
     }
