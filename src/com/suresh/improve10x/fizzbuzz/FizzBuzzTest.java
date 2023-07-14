@@ -15,13 +15,13 @@ public class FizzBuzzTest {
     @Test
     public void checkEmpty() {
         String zero = fizzBuzz.findFizzBuzz(0);
-        assertEquals(zero, zero);
+        assertEquals("0", zero);
     }
 
     @Test
     public void checkOne_returnOne() {
         String one = fizzBuzz.findFizzBuzz(1);
-        assertEquals(one, one);
+        assertEquals("1", one);
     }
 
     @Test
