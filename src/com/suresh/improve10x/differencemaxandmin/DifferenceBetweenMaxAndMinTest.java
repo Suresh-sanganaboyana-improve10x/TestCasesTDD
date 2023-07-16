@@ -35,4 +35,16 @@ public class DifferenceBetweenMaxAndMinTest {
         Integer givenNegativeNumbers = DifferenceMaxAndMin.findDifferenceBetweenMaxAndMin(new int[] {33, 22, 66, 3, 245});
         assertEquals(242, givenNegativeNumbers);
     }
+
+    @Test
+    public void givenBigArray() {
+        Integer givenBigArray = DifferenceMaxAndMin.findDifferenceBetweenMaxAndMin(new int[] {21, 2433, 342, 22, 66, 567, 5, 245, 99, 345, 235,2433});
+        assertEquals(2428, givenBigArray);
+    }
+
+    @Test
+    public void givenAllNegativeNumbers() {
+        Integer givenAllNegativeNumbers = DifferenceMaxAndMin.findDifferenceBetweenMaxAndMin(new int[] {-2, -5, -9, -5, -4, -3});
+        assertEquals(7, givenAllNegativeNumbers);
+    }
 }
