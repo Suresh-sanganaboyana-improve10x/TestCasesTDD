@@ -46,4 +46,10 @@ public class FindTheBombTest {
         String givenCapitalBomb = findTheBomb.findBomb("There is Bomb!");
         assertEquals("Duck", givenCapitalBomb);
     }
+
+    @Test
+    public void givenOneText() {
+        String givenCapitalBomb = findTheBomb.findBomb("There is Duck and cow");
+        assertEquals("Relax There is no bomb", givenCapitalBomb);
+    }
 }
