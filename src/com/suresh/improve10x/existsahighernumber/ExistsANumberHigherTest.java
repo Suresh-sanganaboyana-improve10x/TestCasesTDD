@@ -45,4 +45,5 @@ public class ExistsANumberHigherTest {
         Boolean givenBigValues = existsANumberHigher.isNumberHigher(new int[] {223, 444, 22, 765, 890} , 889 );
         assertEquals(true, givenBigValues);
     }
+
 }

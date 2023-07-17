@@ -9,8 +9,6 @@ public class ExistsANumberHigher {
                 if (arr[i] >= num) {
                     result = true;
                     break;
-                } else {
-                    result = false;
                 }
             }
         }
