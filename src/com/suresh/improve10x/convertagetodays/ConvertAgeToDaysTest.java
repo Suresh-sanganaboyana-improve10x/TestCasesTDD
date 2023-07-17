@@ -34,10 +34,4 @@ public class ConvertAgeToDaysTest {
         int given23 = convertAgeToDays.getDays(23);
         assertEquals(8395, given23);
     }
-
-    @Test
-    public void given32() {
-        int given32 = convertAgeToDays.getDays(23);
-        assertEquals(8395, given32);
-    }
 }
