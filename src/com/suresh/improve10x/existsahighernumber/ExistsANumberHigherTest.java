@@ -17,33 +17,39 @@ public class ExistsANumberHigherTest {
     public void nothing() {}
 
     @Test
-    public void givenEmpty() {
+    public void givenEmpty_returnFalse() {
         Boolean givenEmpty = existsANumberHigher.isNumberHigher(new int[] {}, 0);
         assertEquals(false, givenEmpty);
     }
 
     @Test
-    public void givenNumAsZero() {
+    public void givenNegativeArr_returnTrue() {
+        Boolean givenNegativeArr = existsANumberHigher.isNumberHigher(new int[] {-1, -4, -3, -9, -10} , -11);
+        assertEquals(true, givenNegativeArr);
+    }
+
+    @Test
+    public void givenNumAsZero_returnTrue() {
         Boolean givenNumAsZero = existsANumberHigher.isNumberHigher(new int[] {1, 4, 63, 6}, 0);
         assertEquals(true, givenNumAsZero);
     }
 
     @Test
-    public void givenInArrayZero() {
+    public void givenBothZero_returnTrue() {
         Boolean givenZero = existsANumberHigher.isNumberHigher(new int[] {0}, 0);
         assertEquals(true, givenZero);
     }
 
     @Test
-    public void givenSomeValues() {
+    public void givenSomeValues_returnTrue() {
         Boolean givenSomeValues = existsANumberHigher.isNumberHigher(new int[] {1, 5, 3, 7, 856, 90} , 85 );
         assertEquals(true, givenSomeValues);
     }
 
     @Test
-    public void givenBigValues() {
-        Boolean givenBigValues = existsANumberHigher.isNumberHigher(new int[] {223, 444, 22, 765, 890} , 889 );
-        assertEquals(true, givenBigValues);
+    public void givenBigValues_returnFalse() {
+        Boolean givenBigValues = existsANumberHigher.isNumberHigher(new int[] {223, 444, 22, 765, 890} , 891 );
+        assertEquals(false, givenBigValues);
     }
 
 }
