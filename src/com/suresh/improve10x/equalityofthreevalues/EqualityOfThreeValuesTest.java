@@ -18,20 +18,26 @@ public class EqualityOfThreeValuesTest {
     public void nothing(){}
 
     @Test
-    public void givenAllZeros() {
-        int givenAllZeros = equalityOfThreeValues.findEqualityOfValues(0,0,0);
+    public void givenAllZeros_returnThree() {
+        int givenAllZeros = equalityOfThreeValues.findEqualityOfThreeValues(0,0,0);
         assertEquals(3, givenAllZeros);
     }
 
     @Test
-    public void givenOneZeroZero() {
-        int givenOneZeroZero = equalityOfThreeValues.findEqualityOfValues(1,0,0);
+    public void givenOneZeroZero_returnTwo() {
+        int givenOneZeroZero = equalityOfThreeValues.findEqualityOfThreeValues(1,0,0);
         assertEquals(2, givenOneZeroZero);
     }
 
     @Test
-    public void givenOneZeroTwo() {
-        int givenAllZeros = equalityOfThreeValues.findEqualityOfValues(1,0,2);
-        assertEquals(0, givenAllZeros);
+    public void givenOneZeroTwo_returnZero() {
+        int givenOneZeroTwo = equalityOfThreeValues.findEqualityOfThreeValues(1,0,2);
+        assertEquals(0, givenOneZeroTwo);
+    }
+
+    @Test
+    public void givenTwoOneTwo_returnTwo() {
+        int givenTwoOneTwo = equalityOfThreeValues.findEqualityOfThreeValues(2,1,2);
+        assertEquals(2, givenTwoOneTwo);
     }
 }
