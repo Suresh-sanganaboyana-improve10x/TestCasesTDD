@@ -17,13 +17,13 @@ public class HoursAndMinutesIntoSecondsTest {
     public void nothing() {}
 
     @Test
-    public void givenZero() {
+    public void givenZero_returnZero() {
         int zero = hoursAndMinutesIntoSeconds.convertHoursAndMinutesIntoSeconds(0,0);
         assertEquals(0, zero);
     }
 
     @Test
-    public void givenNegativeInputs() {
+    public void givenNegativeInputs_returnNegativeSeconds() {
         int negativeInputs = hoursAndMinutesIntoSeconds.convertHoursAndMinutesIntoSeconds(-1, -2);
         assertEquals(-3720, negativeInputs);
     }
@@ -36,7 +36,7 @@ public class HoursAndMinutesIntoSecondsTest {
 
     @Test
     public void givenOneAndOne_returnThreeThousandSixHundredSixty() {
-        int twoHrsAndOneMin = hoursAndMinutesIntoSeconds.convertHoursAndMinutesIntoSeconds(1, 1);
-        assertEquals(3660, twoHrsAndOneMin);
+        int givenOneAndOne = hoursAndMinutesIntoSeconds.convertHoursAndMinutesIntoSeconds(1, 1);
+        assertEquals(3660, givenOneAndOne);
     }
 }
