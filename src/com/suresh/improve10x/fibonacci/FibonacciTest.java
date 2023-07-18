@@ -1,6 +1,5 @@
 package com.suresh.improve10x.fibonacci;
 
-import com.suresh.improve10x.fibonacci.Fibonacci;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
