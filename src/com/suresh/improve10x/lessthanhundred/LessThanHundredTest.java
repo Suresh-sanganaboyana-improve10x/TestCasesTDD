@@ -17,15 +17,27 @@ public class LessThanHundredTest {
     public void nothing() {}
 
     @Test
-    public void givenZeros() {
+    public void givenFalseValue_returnFalse() {
+        boolean givenFalseValue = lessThanHundred.isLessThanHundred(50, 50);
+        assertEquals(false, givenFalseValue);
+    }
+
+    @Test
+    public void givenZeros_returnTrue() {
         boolean givenZeros = lessThanHundred.isLessThanHundred(0, 0);
         assertEquals(true, givenZeros);
     }
 
     @Test
-    public void givenFiftyAndFifty() {
-        boolean givenFiftyAndFifty = lessThanHundred.isLessThanHundred(50, 50);
-        assertEquals(false, givenFiftyAndFifty);
+    public void givenNegativeNumbers() {
+        boolean givenFiftyAndForty = lessThanHundred.isLessThanHundred(-50, -40);
+        assertEquals(true, givenFiftyAndForty);
+    }
+
+    @Test
+    public void givenFiftyAndHundred() {
+        boolean givenFiftyAndHundred = lessThanHundred.isLessThanHundred(50, 100);
+        assertEquals(false, givenFiftyAndHundred);
     }
 
     @Test
@@ -34,11 +46,7 @@ public class LessThanHundredTest {
         assertEquals(true, givenFiftyAndForty);
     }
 
-    @Test
-    public void givenNegativeNumbers() {
-        boolean givenFiftyAndForty = lessThanHundred.isLessThanHundred(-50, -40);
-        assertEquals(true, givenFiftyAndForty);
-    }
+
 
     @Test
     public void givenNinetyNineAndOne() {
