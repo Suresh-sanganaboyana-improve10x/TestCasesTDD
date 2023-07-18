@@ -1,12 +1,18 @@
 package com.suresh.improve10x.fizzbuzz;
 
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 public class FizzBuzzTest {
 
-    private FizzBuzz fizzBuzz = new FizzBuzz();
+    private FizzBuzz fizzBuzz;
+
+    @BeforeEach
+    public void setup() {
+        fizzBuzz = new FizzBuzz();
+    }
 
     @Test
     public void nothing() {
