@@ -18,33 +18,39 @@ public class FindTheBombTest {
     public void nothing() {}
 
     @Test
-    public void givenEmpty() {
+    public void givenEmpty_returnEmpty() {
         String givenEmpty = findTheBomb.findBomb("");
-        assertEquals("Relax There is no bomb", givenEmpty);
+        assertEquals("", givenEmpty);
+    }
+
+    @Test
+    public void givenNull_returnNull() {
+        String givenNull = findTheBomb.findBomb(null);
+        assertEquals(null, givenNull);
     }
 
     @Test
     public void givenSureshBomb() {
-        String givenSureshBomb = findTheBomb.findBomb("Suresh bomb");
+        String givenSureshBomb = findTheBomb.findBomb("Russia bomb");
         assertEquals("Duck", givenSureshBomb);
     }
 
     @Test
     public void givenThereIsBomb() {
-        String givenThereIsBomb = findTheBomb.findBomb("There is bomb");
+        String givenThereIsBomb = findTheBomb.findBomb("There is a bomb");
         assertEquals("Duck", givenThereIsBomb);
     }
 
     @Test
     public void givenCapitalBomb() {
-        String givenCapitalBomb = findTheBomb.findBomb("There is Bomb");
+        String givenCapitalBomb = findTheBomb.findBomb("There is a capital Bomb");
         assertEquals("Duck", givenCapitalBomb);
     }
 
     @Test
-    public void givenBombWithInterGenction() {
-        String givenCapitalBomb = findTheBomb.findBomb("There is Bomb!");
-        assertEquals("Duck", givenCapitalBomb);
+    public void givenBombWithNot() {
+        String givenBombWithNot = findTheBomb.findBomb("There is Bomb!");
+        assertEquals("Duck", givenBombWithNot);
     }
 
     @Test
