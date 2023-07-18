@@ -18,6 +18,12 @@ public class EqualityOfThreeValuesTest {
     public void nothing(){}
 
     @Test
+    public void givenOneZeroTwo_returnZero() {
+        int givenOneZeroTwo = equalityOfThreeValues.findEqualityOfThreeValues(1,0,2);
+        assertEquals(0, givenOneZeroTwo);
+    }
+
+    @Test
     public void givenAllZeros_returnThree() {
         int givenAllZeros = equalityOfThreeValues.findEqualityOfThreeValues(0,0,0);
         assertEquals(3, givenAllZeros);
@@ -29,11 +35,7 @@ public class EqualityOfThreeValuesTest {
         assertEquals(2, givenOneZeroZero);
     }
 
-    @Test
-    public void givenOneZeroTwo_returnZero() {
-        int givenOneZeroTwo = equalityOfThreeValues.findEqualityOfThreeValues(1,0,2);
-        assertEquals(0, givenOneZeroTwo);
-    }
+
 
     @Test
     public void givenTwoOneTwo_returnTwo() {

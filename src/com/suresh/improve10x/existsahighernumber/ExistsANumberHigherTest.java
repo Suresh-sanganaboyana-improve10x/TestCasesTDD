@@ -23,6 +23,12 @@ public class ExistsANumberHigherTest {
     }
 
     @Test
+    public void givenNegativeTwo_returnFalse() {
+        Boolean givenNegativeArr = existsANumberHigher.isNumberHigher(new int[] {-2} , 2);
+        assertEquals(false, givenNegativeArr);
+    }
+
+    @Test
     public void givenNegativeArr_returnTrue() {
         Boolean givenNegativeArr = existsANumberHigher.isNumberHigher(new int[] {-1, -4, -3, -9, -10} , -11);
         assertEquals(true, givenNegativeArr);
