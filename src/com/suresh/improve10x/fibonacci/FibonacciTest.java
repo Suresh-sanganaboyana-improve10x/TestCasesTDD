@@ -1,11 +1,26 @@
 package com.suresh.improve10x.fibonacci;
 
 import com.suresh.improve10x.fibonacci.Fibonacci;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 import static org.testng.Assert.assertEquals;
 
 public class FibonacciTest {
+
+    Fibonacci fibonacci;
+
+    @BeforeEach
+    public void setup() {
+        fibonacci = new Fibonacci();
+    }
+
+    @Test
+    public void givenZero_ReturnFibZero() {
+        int zero = fibonacci.findFibonacci(0);
+        assertEquals(0, zero);
+    }
 
     @Test
     public void negativeNumber() {
@@ -16,28 +31,25 @@ public class FibonacciTest {
         find 1
         find 5
         */
-        Fibonacci fibonacci = new Fibonacci();
         int zero = fibonacci.findFibonacci(-2);
         assertEquals(-1,zero);
     }
 
-    @Test
-    public void givenZeroReturnFibZero() {
-        Fibonacci fibonacci = new Fibonacci();
-        int zero = fibonacci.findFibonacci(0);
-        assertEquals(0, zero);
-    }
 
     @Test
     public void givenOne_returnOne() {
-        Fibonacci fibonacci = new Fibonacci();
         int oneThFibonacci = fibonacci.findFibonacci(1);
         assertEquals(1, oneThFibonacci);
     }
 
     @Test
+    public void givenTwo_returnOne() {
+        int oneThFibonacci = fibonacci.findFibonacci(2);
+        assertEquals(1, oneThFibonacci);
+    }
+
+    @Test
     public void givenFive_returnFive() {
-        Fibonacci fibonacci = new Fibonacci();
         int fifthFib = fibonacci.findFibonacci(10);
         assertEquals(55, fifthFib);
     }
