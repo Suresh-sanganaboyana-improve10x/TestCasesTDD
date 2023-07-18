@@ -18,13 +18,13 @@ public class MinutesIntoSecondsTest {
     public void nothing() {}
 
     @Test
-    public void givenZero() {
+    public void givenZero_returnZero() {
         int zeroSecond = minutesIntoSeconds.convertMinutesIntoSeconds(0);
         assertEquals(0, zeroSecond);
     }
 
     @Test
-    public void givenNegativeInput() {
+    public void givenNegativeInput_returnNegative() {
         int negativeNum = minutesIntoSeconds.convertMinutesIntoSeconds(-1);
         assertEquals(-60, negativeNum);
     }
