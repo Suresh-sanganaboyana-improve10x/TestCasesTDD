@@ -18,6 +18,18 @@ public class StringEndingMatchesTest {
     public void nothing() {}
 
     @Test
+    public void givenFalseValues_returnFalse() {
+        Boolean stringMatches = stringEndingMatches.isStringMatches("Chiranjeevi", "PawanKalyan");
+        assertEquals(false, stringMatches);
+    }
+
+    @Test
+    public void givenNull_returnNull() {
+        Boolean stringMatches = stringEndingMatches.isStringMatches(null, null);
+        assertEquals(false, stringMatches);
+    }
+
+    @Test
     public void givenOneStringAndSecondIsEmpty_returnTrue() {
         Boolean stringMatches = stringEndingMatches.isStringMatches("Suresh", "");
         assertEquals(true, stringMatches);
