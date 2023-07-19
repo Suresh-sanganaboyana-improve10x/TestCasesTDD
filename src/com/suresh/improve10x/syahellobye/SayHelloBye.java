@@ -1,7 +1,7 @@
 package com.suresh.improve10x.syahellobye;
 
 public class SayHelloBye {
-    public String getHelloBye(int num, String name) {
+    public String getHelloByeWithName(int num, String name) {
         String result = "";
         if (name == null) {
             return null;
