@@ -24,9 +24,15 @@ public class NthEvenNumberTest {
     }
 
     @Test
+    public void givenNegative() {
+        int givenOne = nthEvenNumber.findNthEvenNumber(-1);
+        assertEquals(0, givenOne);
+    }
+
+    @Test
     public void givenOne() {
         int givenOne = nthEvenNumber.findNthEvenNumber(1);
-        assertEquals(1, givenOne);
+        assertEquals(0, givenOne);
     }
 
     @Test
@@ -39,12 +45,6 @@ public class NthEvenNumberTest {
     public void givenThree() {
         int givenThree = nthEvenNumber.findNthEvenNumber(3);
         assertEquals(4, givenThree);
-    }
-
-    @Test
-    public void givenNegative() {
-        int givenOne = nthEvenNumber.findNthEvenNumber(-4);
-        assertEquals(-10, givenOne);
     }
 
     @Test

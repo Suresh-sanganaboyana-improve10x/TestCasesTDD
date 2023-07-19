@@ -24,6 +24,12 @@ public class NameGreetingTest {
     }
 
     @Test
+    public void givenNull() {
+        String givenNull = nameGreeting.getGreetingName(null);
+        assertEquals(null, givenNull);
+    }
+
+    @Test
     public void givenName() {
         String givenName = nameGreeting.getGreetingName("Suresh");
         assertEquals("Hello Suresh!", givenName);
@@ -31,12 +37,6 @@ public class NameGreetingTest {
 
     @Test
     public void givenSurya() {
-        String givenName = nameGreeting.getGreetingName("Surya");
-        assertEquals("Hello Surya!", givenName);
-    }
-
-    @Test
-    public void given() {
         String givenName = nameGreeting.getGreetingName("Surya");
         assertEquals("Hello Surya!", givenName);
     }
