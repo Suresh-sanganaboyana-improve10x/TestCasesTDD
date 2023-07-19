@@ -17,20 +17,21 @@ public class SayHelloByeTest {
     public void nothing() {}
 
     @Test
-    public void givenZeroEmpty_returnByeEmpty() {
-        String givenOneName = sayHelloBye.getHelloBye(4, "");
-        assertEquals("Give Name", givenOneName);
-    }
-    @Test
-    public void givenZeroSmallLetter_returnByeWithCapitalLetter() {
-        String givenEmpty = sayHelloBye.getHelloBye(0, "suri");
-        assertEquals("Bye Suri", givenEmpty);
+    public void givenEmpty_returnEmpty() {
+        String givenOneName = sayHelloBye.getHelloBye(0, "");
+        assertEquals("", givenOneName);
     }
 
     @Test
-    public void givenNegativeOne_returnInvalid() {
-        String givenNegative = sayHelloBye.getHelloBye(-1, "Akhil");
-        assertEquals("Invalid", givenNegative);
+    public void givenZeroEmpty_returnByeEmpty() {
+        String givenOneName = sayHelloBye.getHelloBye(4, "");
+        assertEquals("", givenOneName);
+    }
+
+    @Test
+    public void givenNull_returnNull() {
+        String givenOneName = sayHelloBye.getHelloBye(4, null);
+        assertEquals(null, givenOneName);
     }
 
     @Test
@@ -43,5 +44,11 @@ public class SayHelloByeTest {
     public void givenOneName_returnHelloName() {
         String givenOneName = sayHelloBye.getHelloBye(1, "Suresh");
         assertEquals("Hello Suresh", givenOneName);
+    }
+
+    @Test
+    public void givenNegativeOne_returnInvalid() {
+        String givenNegative = sayHelloBye.getHelloBye(-1, "Akhil");
+        assertEquals("Invalid", givenNegative);
     }
 }

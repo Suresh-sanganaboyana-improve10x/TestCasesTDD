@@ -24,7 +24,7 @@ public class StringEndingMatchesTest {
     }
 
     @Test
-    public void givenNull_returnNull() {
+    public void givenNull_returnFalse() {
         Boolean stringMatches = stringEndingMatches.isStringMatches(null, null);
         assertEquals(false, stringMatches);
     }
