@@ -19,16 +19,17 @@ public class ShuffleTheNameTest {
     }
 
     @Test
-    public void givenNull_returnEmpty() {
-        String givenNull = shuffleTheName.getShuffleNames(null);
-        assertEquals("", givenNull);
-    }
-
-    @Test
     public void givenEmpty_returnEmpty() {
         String givenEmpty = shuffleTheName.getShuffleNames("");
         assertEquals("", givenEmpty);
     }
+
+    @Test
+    public void givenNull_returnEmpty() {
+        String givenNull = shuffleTheName.getShuffleNames(null);
+        assertEquals(null, givenNull);
+    }
+
 
     @Test
     public void givenName_returnSanginaboinaSuresh() {
