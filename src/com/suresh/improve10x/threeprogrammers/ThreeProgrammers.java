@@ -5,6 +5,9 @@ public class ThreeProgrammers {
         int difference = 0;
         int maxAmount;
         int minAmount;
+        if (prgOne < 0 && prgTwo < 0 && prgThree < 0) {
+            return -1;
+        }
         maxAmount = findMax(prgOne, prgTwo, prgThree);
         minAmount = findMin(prgOne, prgTwo, prgThree);
         difference = maxAmount - minAmount;

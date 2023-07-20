@@ -24,38 +24,38 @@ public class ThreeProgrammersTest {
     }
 
     @Test
-    public void givenThirtyTwentyTen() {
-        int givenThreeZeros = threeProgrammers.theProgrammers(30, 20, 10);
-        assertEquals(20, givenThreeZeros);
-    }
-
-    @Test
-    public void givenAmountInThousands() {
-        int givenThreeZeros = threeProgrammers.theProgrammers(30000, 10000, 50000);
-        assertEquals(40000, givenThreeZeros);
-    }
-
-    @Test
-    public void givenFirstTest() {
-        int givenThreeZeros = threeProgrammers.theProgrammers(147, 33, 526);
-        assertEquals(493, givenThreeZeros);
-    }
-
-    @Test
-    public void givenSecondTest() {
-        int givenThreeZeros = threeProgrammers.theProgrammers(33, 72, 74);
-        assertEquals(41, givenThreeZeros);
-    }
-
-    @Test
     public void givenNegative() {
-        int givenThreeZeros = threeProgrammers.theProgrammers(-33, -72, -74);
-        assertEquals(41, givenThreeZeros);
+        int givenNegative = threeProgrammers.theProgrammers(-1, -1, -1);
+        assertEquals(-1, givenNegative);
+    }
+
+    @Test
+    public void givenTenZeroZero() {
+        int givenTenZeroZero = threeProgrammers.theProgrammers(10, 0, 0);
+        assertEquals(10, givenTenZeroZero);
+    }
+
+    @Test
+    public void givenZeroTenZero() {
+        int givenZeroTenZero = threeProgrammers.theProgrammers(0, 10, 0);
+        assertEquals(10, givenZeroTenZero);
+    }
+
+    @Test
+    public void givenZeroZeroTen() {
+        int givenZeroZeroTen = threeProgrammers.theProgrammers(0, 0, 10);
+        assertEquals(10, givenZeroZeroTen);
+    }
+
+    @Test
+    public void givenThreeTens() {
+        int givenThreeZeros = threeProgrammers.theProgrammers(10, 10, 10);
+        assertEquals(0, givenThreeZeros);
     }
 
     @Test
     public void givenAllEqualAmount() {
-        int givenThreeZeros = threeProgrammers.theProgrammers(1000, 1000, 1000);
-        assertEquals(0, givenThreeZeros);
+        int givenThreeZeros = threeProgrammers.theProgrammers(100, 30, 20);
+        assertEquals(80, givenThreeZeros);
     }
 }
