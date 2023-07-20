@@ -23,9 +23,21 @@ public class FactorialTest {
     }
 
     @Test
+    public void getNegativeFactorial_returnMinusOne() {
+        int getNegativeFactorial = factorial.findFactorial(-1);
+        assertEquals(-1, getNegativeFactorial);
+    }
+
+    @Test
     public void getOneFactorial_returnOne() {
         int factOfOne = factorial.findFactorial(1);
         assertEquals(1, factOfOne);
+    }
+
+    @Test
+    public void getTwoFactorial_returnTwo() {
+        int factOfOne = factorial.findFactorial(2);
+        assertEquals(2, factOfOne);
     }
 
     @Test
