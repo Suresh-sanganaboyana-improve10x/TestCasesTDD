@@ -25,32 +25,44 @@ public class TwoMakesTenTest {
     }
 
     @Test
-    public void givenOneAndNine_returnTrue() {
-        Boolean givenOneAndNine = twoMakesTen.areTwoMakesTen(1, 9);
-        assertEquals(true, givenOneAndNine);
-    }
-
-    @Test
     public void givenNegativeNumbers() {
-        Boolean givenNegative = twoMakesTen.areTwoMakesTen(-2, -8);
+        Boolean givenNegative = twoMakesTen.areTwoMakesTen(-1, -1);
         assertEquals(false, givenNegative);
     }
 
     @Test
-    public void givenTenAndTen_returnTrue() {
+    public void givenNineOne_returnTrue() {
+        Boolean givenNineOne = twoMakesTen.areTwoMakesTen(9, 1);
+        assertEquals(true, givenNineOne);
+    }
+
+    @Test
+    public void givenOneNine_returnTrue() {
+        Boolean givenOneNine = twoMakesTen.areTwoMakesTen(1, 9);
+        assertEquals(true, givenOneNine);
+    }
+
+    @Test
+    public void givenTenZero_returnTrue() {
+        Boolean givenTenZero = twoMakesTen.areTwoMakesTen(10, 0);
+        assertEquals(true, givenTenZero);
+    }
+
+    @Test
+    public void givenZeroTen_returnTrue() {
+        Boolean givenZeroTen = twoMakesTen.areTwoMakesTen(0, 10);
+        assertEquals(true, givenZeroTen);
+    }
+
+    @Test
+    public void givenTenTen_returnTrue() {
         Boolean givenTenTen = twoMakesTen.areTwoMakesTen(10, 10);
         assertEquals(true, givenTenTen);
     }
 
     @Test
-    public void givenThreeAndFive_returnFalse() {
-        Boolean givenThreeAndFive = twoMakesTen.areTwoMakesTen(3, 5);
-        assertEquals(false, givenThreeAndFive);
-    }
-
-    @Test
-    public void givenNineAndNine_returnFalse() {
-        Boolean givenThreeAndFive = twoMakesTen.areTwoMakesTen(9, 9);
-        assertEquals(false, givenThreeAndFive);
+    public void givenFiveSix_returnFalse() {
+        Boolean givenTenTen = twoMakesTen.areTwoMakesTen(5, 6);
+        assertEquals(false, givenTenTen);
     }
 }
