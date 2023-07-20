@@ -11,20 +11,20 @@ public class ThreeProgrammers {
         return difference;
     }
 
-    private static int findMin(int prgOne, int prgTwo, int prgThree) {
-        if (prgOne < prgTwo && prgOne < prgThree) {
+    private static int findMax(int prgOne, int prgTwo, int prgThree) {
+        if (prgOne > prgTwo && prgOne > prgThree) {
             return prgOne;
-        } else if (prgTwo < prgThree) {
+        } else if (prgTwo > prgThree) {
             return prgTwo;
         } else {
             return prgThree;
         }
     }
 
-    private static int findMax(int prgOne, int prgTwo, int prgThree) {
-        if (prgOne > prgTwo && prgOne > prgThree) {
+    private static int findMin(int prgOne, int prgTwo, int prgThree) {
+        if (prgOne < prgTwo && prgOne < prgThree) {
             return prgOne;
-        } else if (prgTwo > prgThree) {
+        } else if (prgTwo < prgThree) {
             return prgTwo;
         } else {
             return prgThree;
