@@ -17,31 +17,43 @@ public class UpVotesDownVotesTest {
     public void nothing() {}
 
     @Test
-    public void givenTwoZero() {
+    public void givenTwoZeros_returnZero() {
         int givenTwoZeros = upVotesDownVotes.getUpVotesVsDownVotes(0, 0);
         assertEquals(0, givenTwoZeros);
     }
 
     @Test
-    public void givenOneTwo() {
+    public void givenNegative_returnMinusOne() {
+        int givenNegative = upVotesDownVotes.getUpVotesVsDownVotes(-1, -10);
+        assertEquals(-1, givenNegative);
+    }
+
+    @Test
+    public void givenOneTwo_returnMinusOne() {
         int givenOneTwo = upVotesDownVotes.getUpVotesVsDownVotes(1, 2);
         assertEquals(-1, givenOneTwo);
     }
 
     @Test
-    public void givenThirteenAndZero() {
+    public void givenThirteenAndZero_returnThirteen() {
         int givenThirteenAndZero = upVotesDownVotes.getUpVotesVsDownVotes(13, 0);
         assertEquals(13, givenThirteenAndZero);
     }
 
     @Test
-    public void givenTwoAndThirtyThree() {
-        int givenThirteenAndZero = upVotesDownVotes.getUpVotesVsDownVotes(2, 33);
-        assertEquals(-31, givenThirteenAndZero);
+    public void givenThirteenAndThree_returnTen() {
+        int givenThirteenAndZero = upVotesDownVotes.getUpVotesVsDownVotes(13, 3);
+        assertEquals(10, givenThirteenAndZero);
     }
 
     @Test
-    public void givenOneThirtyTwoAndOneThirtyTwo() {
+    public void givenTwoAndThirtyThree_returnMinusThirtyOne() {
+        int givenTwoAndThirtyThree = upVotesDownVotes.getUpVotesVsDownVotes(2, 33);
+        assertEquals(-31, givenTwoAndThirtyThree);
+    }
+
+    @Test
+    public void givenOneThirtyTwoAndOneThirtyTwo_returnZero() {
         int givenOneThirtyTwoAndOneThirtyTwo = upVotesDownVotes.getUpVotesVsDownVotes(132, 132);
         assertEquals(0, givenOneThirtyTwoAndOneThirtyTwo);
     }
