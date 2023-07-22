@@ -7,9 +7,7 @@ public class Player {
     private int score;
     private int totalCoinValue;
     public Player(String name) {
-        this.name = name == null ? "" : name.trim();
-        this.health = 100;
-        this.score = 0;
+       this(name, 100);
     }
 
     public Player(String name, int health) {
