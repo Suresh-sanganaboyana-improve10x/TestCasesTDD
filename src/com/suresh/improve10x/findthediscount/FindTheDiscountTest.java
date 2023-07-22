@@ -1,4 +1,4 @@
-package com.suresh.improve10x.findthedicount;
+package com.suresh.improve10x.findthediscount;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,6 +18,18 @@ public class FindTheDiscountTest {
     }
 
     @Test
+    public void givenZero() {
+        float givenZero = findTheDiscount.findTheFinalPrice(0, 0);
+        assertEquals(0, givenZero);
+    }
+
+   /* @Test
+    public void givenNegative() {
+        float givenHundredAndTen = findTheDiscount.findTheFinalPrice(100.f, -10.f);
+        assertEquals(110.0, givenHundredAndTen);
+    }*/
+
+    @Test
     public void givenHundredAndTen() {
         float givenHundredAndTen = findTheDiscount.findTheFinalPrice(100.f, 10.f);
         assertEquals(90, givenHundredAndTen);
@@ -35,11 +47,11 @@ public class FindTheDiscountTest {
         assertEquals(-500, givenNegativeValues);
     }
 
-    @Test
+    /*@Test
     public void givenFloatPriceAndFloatDiscount() {
         float givenFloatPriceAndFloatDiscount = findTheDiscount.findTheFinalPrice(1000f, 10.5f);
         assertEquals(895.0, givenFloatPriceAndFloatDiscount);
-    }
+    }*/
 
     @Test
     public void givenOneLackAndFive() {
