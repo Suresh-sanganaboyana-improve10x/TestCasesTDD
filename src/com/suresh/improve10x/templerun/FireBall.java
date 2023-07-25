@@ -1,8 +1,9 @@
 package com.suresh.improve10x.templerun;
 
-public class FireBall {
+public class FireBall extends Obstacle {
     private int speed;
-    public FireBall(int speed) {
+    public FireBall(int speed) throws InvalidObstacleDamageException {
+        super("FireBall", 30);
         if (speed < 0 || speed > 100) {
             throw new InvalidFireBallSpeedException();
         }

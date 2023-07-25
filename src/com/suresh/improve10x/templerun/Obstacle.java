@@ -1,8 +1,8 @@
 package com.suresh.improve10x.templerun;
 
 public class Obstacle {
-    private String name;
-    private int damage;
+    protected String name;
+    protected int damage;
 
     public Obstacle(String name, int damage) throws InvalidObstacleDamageException {
         this.name = name == null ? "" : name.trim();

@@ -38,14 +38,14 @@ public class FireBallTest {
     }
 
     @Test
-    public void given10_whenRollMethodCalled_displayRollingMessage() {
+    public void given10_whenRollMethodCalled_displayRollingMessage() throws Obstacle.InvalidObstacleDamageException {
         FireBall fireBall = new FireBall(10);
         fireBall.roll();
         assertEquals("FireBall is rolled with " + 10 + " kmh speed!", outputStream.toString().trim());
     }
 
     @Test
-    public void given100_whenRollMethodCalled_displayRollingMessage() {
+    public void given100_whenRollMethodCalled_displayRollingMessage() throws Obstacle.InvalidObstacleDamageException {
         FireBall fireBall = new FireBall(100);
         fireBall.roll();
         assertEquals("FireBall is rolled with " + 100 + " kmh speed!", outputStream.toString().trim());
