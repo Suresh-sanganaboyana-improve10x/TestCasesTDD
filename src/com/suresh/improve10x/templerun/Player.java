@@ -5,9 +5,11 @@ public class Player {
     private String name;
     private int health;
     private int score;
+    private int reduceHealth;
     private int totalCoinValue;
+
     public Player(String name) {
-       this(name, 100);
+        this(name, 100);
     }
 
     public Player(String name, int health) {
@@ -43,6 +45,10 @@ public class Player {
         System.out.println(name + " jumped to avoid obstacles!");
     }
 
-    public class InvalidHealthException extends RuntimeException{
+    public void reduceHealth(int damage) {
+        health -= damage;
+    }
+
+    public class InvalidHealthException extends RuntimeException {
     }
 }
