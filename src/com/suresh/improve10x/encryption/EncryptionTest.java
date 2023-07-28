@@ -161,4 +161,16 @@ public class EncryptionTest {
         String givenalpaca = encryption.encrypt("alpaca");
         assertEquals("0c0pl0aca", givenalpaca);
     }
+
+    @Test
+    public void givenCapital_return0c0pl0aca() {
+        String givenCapital = encryption.encrypt("APPLE");
+        assertEquals("1lpp0aca", givenCapital);
+    }
+
+    @Test
+    public void givenSpaceText_return0c0pl0aca() {
+        String givenCapital = encryption.encrypt(" APPLE ");
+        assertEquals("1lpp0aca", givenCapital);
+    }
 }

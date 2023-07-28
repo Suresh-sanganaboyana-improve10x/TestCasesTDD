@@ -8,7 +8,7 @@ public class TempleRun {
     }
 
     private static void startGame() throws Exception{
-        Player player = new Player("Adventurer", 100);
+        Player player = new Player("Suresh", 100);
         int[] coinValues = {10, 20, 30 ,40, 50};
         boolean isGameRunning = true;
         Random random = new Random();

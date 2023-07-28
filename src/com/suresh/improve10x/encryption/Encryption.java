@@ -8,7 +8,7 @@ public class Encryption {
         } else {
             String reverse = "";
             for (int i = word.length()-1; i >= 0;  i--) {
-                reverse = reverse + word.charAt(i);
+                reverse = reverse + word.toLowerCase().charAt(i);
             }
             char[] replacedVowels = reverse.toCharArray();
             for (int i = 0; i < reverse.length(); i++) {
@@ -25,7 +25,7 @@ public class Encryption {
                 }
             }
             String replace = String.valueOf(replacedVowels);
-            result = replace + "aca";
+            result = replace.trim() + "aca";
             return result;
         }
     }
