@@ -1,6 +1,8 @@
 package com.suresh.improve10x.specialarrays;
 
 public class SpecialArray {
+//Todo: https://edabit.com/challenge/YmeiRhzaiR3MCPBiT
+
     public Boolean isSpecialArray(Integer[] array) throws InvalidArrayException {
         Boolean result = false;
         if (array == null || array.length < 1) {
